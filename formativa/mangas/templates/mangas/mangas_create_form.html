@@ -1,0 +1,19 @@
+{% extends 'mangas/base.html' %}
+
+{% block content %}
+
+<h1> Mangas Create form </h1>
+
+<form method= "post">
+
+    {% csrf_token %}
+
+        {{ form.as_p }}
+        <div> 
+            <button> Create </button>
+            <a href="{% url 'manga_list' %}"> Cancel </a>
+        </div>
+
+</form>
+
+{% endblock %}

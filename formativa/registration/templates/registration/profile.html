@@ -1,0 +1,24 @@
+{% extends 'mangas/base.html' %}
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    
+    {% comment %} {{ form.as_p }} {% endcomment %}
+
+    {% if user %}
+        <h3> Sesion iniciada como: </h3>
+        <h1> {{ request.user.username }} </h1>
+
+    {% else %}
+        <h3> No hay perfil </h3>
+    {% endif %}
+
+    <div class="is-grouped">
+        <button type="submit" class="btn btn-dark">Actualizar Datos</button>
+    </div>
+    
+</form>
+
+{% endblock %}
