@@ -11,22 +11,18 @@
 
         <h1> {{ manga.name }} </h1>
         <h1> {{ manga.description }}</h1>
+
+        
+
         <h1> {{ manga.rating }}</h1>
         
-        {% if request.manga.photo %}
+        {% if manga.photo %}
 
-            <h1>hay foto </h1>
+            <img src=" {{ manga.photo.url }}" alt="...">
 
-        {% else %}
-
-        
+        {% else %}        
          <h2> no Hay foto </h2>
-         
-         
-
         {% endif %}
-
-
 
         <br>
 
