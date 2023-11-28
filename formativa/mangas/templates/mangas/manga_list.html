@@ -12,6 +12,7 @@
     {% for manga in mangas %}   
 
         <h1> {{ manga.name }} </h1>
+<<<<<<< HEAD
         <p> {{ manga.description }}</p>
 
 
@@ -44,6 +45,21 @@
         </div>
 
         
+=======
+        <h1> {{ manga.description }}</h1>
+
+        
+
+        <h1> {{ manga.rating }}</h1>
+        
+        {% if manga.photo %}
+
+            <img src=" {{ manga.photo.url }}" alt="...">
+
+        {% else %}        
+         <h2> no Hay foto </h2>
+        {% endif %}
+>>>>>>> 6f2c34382f2ea5b64a92dece2d23b95ae745b35d
 
         <br>
 
