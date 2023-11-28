@@ -7,12 +7,44 @@
 
     <a href="{% url 'manga_list_create' %}"> Create a new review</a>
 
-    {% for manga in mangas %}
+    <br> 
+
+    {% for manga in mangas %}   
 
         <h1> {{ manga.name }} </h1>
-        <h1> {{ manga.description }}</h1>
-        <h1> {{ manga.rating }}</h1>
+        <p> {{ manga.description }}</p>
+
+
+        <div class="rating">
+            {% for _ in "x"|ljust:manga.rating %}
+
+                {% load static %}
+
+                <img src="{% static 'mangas/img/yellowStar.png' %}" alt="Star" class="star-icon bi" width="50" height="50"> 
+                {% comment %} star-icon en mangas/statuc/mangas/css/style.css {% endcomment %}
+
+
+            {% endfor %}
+
+
+        </div>
         
+
+        <div class="card" style="width: 18rem;">
+            {% if manga.photo %}
+    
+            <img src="{{ manga.photo.url }}" class="card-img-top" alt="...">
+    
+            {% else %}
+    
+            {% load static %}
+            <img src="{% static 'core/img/defaultBook.png' %}" class="card-img-top" alt="..." >
+    
+            {% endif %}
+        </div>
+
+        
+
         <br>
 
     {% endfor %}

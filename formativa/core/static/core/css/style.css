@@ -7,6 +7,12 @@
 }
 
 
+.star-icon {
+    width: 20px;  /* Ajusta el ancho según tus preferencias */
+    height: 20px; /* Ajusta la altura según tus preferencias */
+    margin-right: 5px; /* Ajusta el margen entre las estrellas según tus preferencias */
+}
+
 img{
     /**Le doy un tamaño maximo de 100% del contenedor a la imagen**/
     max-width: 100%;
