@@ -1,8 +1,6 @@
 # Preguntar al profe
 
-## El logout lleva a un logout de administrador...? 
-mangas/templates/mangas/base.html
+## Se puede?
+mangas/templates/mangas/manga_list.html line 19
 
-## libreria para usar HTML y django HTML juntos
-
-## 
+## Cargar el static 
